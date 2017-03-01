@@ -21,9 +21,7 @@ Use `HTTPCookieMessageHandler` to receive and send `HTTPCookies` formatted as `J
 
 5. **DRAFT**: Observes `HTTPCookies` of interest and and notifies whenever they change, e.g., signaling when a session cookie has changed or expired.
 
-## Examples
-
-### `HTTPCookie` serialization
+## `HTTPCookie` serialization
 
 For the following examples, let's assume we have a cookie called `sessionCookie`.
 
@@ -49,17 +47,17 @@ let jsonString: String =
 let cookie: HTTPCookie =
   HTTPCookieJson.cookie(dictionary: sessionDictionary)
 ```
+## `CRUD` using the `MessageHandler` `Protocol` (aka "`Interface`")
 
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+The [`MessageHandler`](HTTPCookieMessageHandler/MessageHandler.swift) protocol defines a common interface for creating, reading, updating, and deleting data.
 
 ## Requirements
 
-This library was written in Swift version 3.0.
+This library was written in Swift version 3.0. It hasn't been tested for `Objective C` bridging, yet: that's next.
 
 ## Installation
 
-HTTPCookieMessageHandler is available through [CocoaPods](http://cocoapods.org). To install
+`HTTPCookieMessageHandler` is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
