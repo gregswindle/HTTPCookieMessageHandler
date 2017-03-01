@@ -1,18 +1,21 @@
 PODS:
+  - Mockit (1.3.4)
   - Nimble (6.0.1)
   - Quick (1.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Mockit
   - Nimble
   - Quick
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Mockit: 1b253f229dde898b268f8bd5dffcf2fd0151ff75
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 1d1b5952e66e483be4ea0b67c054ed3a337b386a
+PODFILE CHECKSUM: afb6efb3ea05a9c006cee5366de3f74fcb0f829f
 
 COCOAPODS: 1.2.0

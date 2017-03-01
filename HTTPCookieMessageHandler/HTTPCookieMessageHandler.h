@@ -6,7 +6,7 @@
 //  Copyright © 2017 Swindle, Gregory Jay (Greg). All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for HTTPCookieMessageHandler.
 FOUNDATION_EXPORT double HTTPCookieMessageHandlerVersionNumber;

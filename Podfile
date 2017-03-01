@@ -26,6 +26,7 @@ target 'HTTPCookieMessageHandler' do
     pod 'Nimble'
 
     # Mocks and stubs
+    pod 'Mockit'
 
     # Code coverage
     # plugin 'slather'
