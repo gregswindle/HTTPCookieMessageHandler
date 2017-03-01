@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "Apache2.0", :file => "LICENCE" }
+  s.license      = { :type => "Apache2", :file => "LICENCE" }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -78,7 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler", :tag => "#{s.version}" }
+  s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler.git" } #, :tag => "#{s.version}" }
+  # s.source       = { :git => "git@githubpoc.ebiz.verizon.com:v128477/HTTPCookieMessageHandler.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,10 +90,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "HTTPCookieMessageHandler", "HTTPCookieMessageHandler/**/*.{swift}"
   s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "HTTPCookieMessageHandler/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,7 +132,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.user_target_config = { "FRAMEWORK_SEARCH_PATHS" => "$(PLATFORM_DIR)/Developer/library/Frameworks" }
+  # s.user_target_config = { "FRAMEWORK_SEARCH_PATHS" => "$(PLATFORM_DIR)/Developer/library/Frameworks" }
   # s.dependency "JSONKit"
 
 end
