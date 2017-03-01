@@ -77,8 +77,8 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
-  s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler.git" } #, :tag => "#{s.version}" }
+  s.source        = { :git => "ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git" }
+  # s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler.git" } #, :tag => "#{s.version}" }
   # s.source       = { :git => "git@githubpoc.ebiz.verizon.com:v128477/HTTPCookieMessageHandler.git"}
 
 
