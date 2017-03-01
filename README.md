@@ -57,11 +57,17 @@ This library was written in Swift version 3.0. It hasn't been tested for `Object
 
 ## Installation
 
-`HTTPCookieMessageHandler` is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+`HTTPCookieMessageHandler` is not (yet) available through [CocoaPods](http://cocoapods.org). To install
+it, you'll need an SSH account on Verizon OneStash. If you do, simply add the following line to your Podfile:
 
 ```ruby
-pod "HTTPCookieMessageHandler"
+pod 'HTTPCookieMessageHandler', :git => 'ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git'
+```
+
+Save your `Podfile` and run
+
+```
+$ pod install
 ```
 
 ## Testing
