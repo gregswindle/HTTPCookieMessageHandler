@@ -17,6 +17,9 @@ target 'HTTPCookieMessageHandler' do
   # pod 'RxSwift'
   # pod 'RxCocoa'
 
+  # Quality
+  pod 'SwiftLint'
+
 
   target 'HTTPCookieMessageHandlerTests' do
     inherit! :search_paths
@@ -26,7 +29,7 @@ target 'HTTPCookieMessageHandler' do
     pod 'Nimble'
 
     # Mocks and stubs
-    pod 'Mockit'
+    pod 'Cuckoo'
 
     # Code coverage
     # plugin 'slather'
