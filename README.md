@@ -57,6 +57,8 @@ This library was written in Swift version 3.0. It hasn't been tested for `Object
 
 ## Installation
 
+> The best way to install `HTTPCookieMessageHandler` is with CocoaPods. Read [Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started) on the CocoaPods site, if you don't have `cocoapods` installed, already.
+
 `HTTPCookieMessageHandler` is not (yet) available through [CocoaPods](http://cocoapods.org). To install
 it, you'll need an SSH account on Verizon OneStash. If you do, simply add the following line to your Podfile:
 
@@ -70,9 +72,12 @@ Save your `Podfile` and run
 $ pod install
 ```
 
+If your Xcode project is open, close it and **reopen the `*.xcworkspace`, _not_ the ``*.xcodeproj`**.
+
 ## Testing
 
 `HTTPCookieMessageHandler` uses
+
 * [Quick](https://github.com/Quick/Quick) for BDD tests
 
 * [Nimble](https://github.com/Quick/Nimble) for matchers
@@ -185,4 +190,4 @@ Greg Swindle, gregory.jay.swindle@one.verizon.com
 
 ## License
 
-HTTPCookieMessageHandler is available under the MIT license. See the LICENSE file for more info.
+`HTTPCookieMessageHandler` is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
