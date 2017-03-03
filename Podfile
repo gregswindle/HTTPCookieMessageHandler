@@ -12,6 +12,7 @@ target 'HTTPCookieMessageHandler' do
 
   # JSON (de)serialization
   pod 'SwiftyJSON'
+  pod 'AlamofireObjectMapper'
 
   # Observables
   # pod 'RxSwift'

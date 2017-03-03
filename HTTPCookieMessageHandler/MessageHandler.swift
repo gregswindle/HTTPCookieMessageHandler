@@ -14,10 +14,10 @@ public protocol MessageHandler {
 
   //associatedtype StorageItemType
 
-  func find(_ options: Dictionary<String, Any>?, _ callbackPredicate: (ItemType) -> Bool) -> ItemType?
+  func find(_ options: [String: Any]?, _ callbackPredicate: (ItemType) -> Bool) -> ItemType?
 
   func save(item: ItemType)
 
-  func save(_ options: Dictionary<String, Any>?, items: [ItemType])
+  func save(_ options: [String: Any]?, items: [ItemType])
 
 }

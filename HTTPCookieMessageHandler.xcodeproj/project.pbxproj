@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB0CC6F5096824E42654C2F /* Pods_HTTPCookieMessageHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FEC641BD12462EC16E032 /* Pods_HTTPCookieMessageHandlerTests.framework */; };
 		56852E8F1E66AE7E0052C449 /* HTTPCookieMessageHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56852E851E66AE7E0052C449 /* HTTPCookieMessageHandler.framework */; };
 		56852E961E66AE7E0052C449 /* HTTPCookieMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 56852E881E66AE7E0052C449 /* HTTPCookieMessageHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56852EBA1E66B0BC0052C449 /* HTTPCookieJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852EB71E66B0BC0052C449 /* HTTPCookieJson.swift */; };
@@ -20,8 +21,7 @@
 		569650A71E68947D001BB5CF /* HTTPCookieMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569650A61E68947D001BB5CF /* HTTPCookieMessage.swift */; };
 		569650A91E6894D5001BB5CF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569650A81E6894D5001BB5CF /* Message.swift */; };
 		569650AD1E68E4C8001BB5CF /* MockHTTPCookieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569650AC1E68E4C8001BB5CF /* MockHTTPCookieStorage.swift */; };
-		7FCF99C39FDB3CFE164FFDEB /* Pods_HTTPCookieMessageHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4BA7E794835321D951CECD /* Pods_HTTPCookieMessageHandlerTests.framework */; };
-		DD181C0459D1E99C593160DD /* Pods_HTTPCookieMessageHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7EDDAAF13CC847CAC17FD7 /* Pods_HTTPCookieMessageHandler.framework */; };
+		C2855F82758B13E21F199C9B /* Pods_HTTPCookieMessageHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A1F0EB32758E4641CE979 /* Pods_HTTPCookieMessageHandler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3AC17E21AFA52EB90D52510F /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3EB0A603CCC97C8D56A28B2E /* Pods-HTTPCookieMessageHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler.release.xcconfig"; sourceTree = "<group>"; };
-		55C7F1D598E86499D314A80D /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
-		55FF9D3696E689D61830A604 /* Pods-HTTPCookieMessageHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		49CCD21DA317559934EFD6A3 /* Pods-HTTPCookieMessageHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler.release.xcconfig"; sourceTree = "<group>"; };
 		56852E851E66AE7E0052C449 /* HTTPCookieMessageHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPCookieMessageHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56852E881E66AE7E0052C449 /* HTTPCookieMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPCookieMessageHandler.h; sourceTree = "<group>"; };
 		56852E891E66AE7E0052C449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +53,11 @@
 		569650A61E68947D001BB5CF /* HTTPCookieMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPCookieMessage.swift; sourceTree = "<group>"; };
 		569650A81E6894D5001BB5CF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		569650AC1E68E4C8001BB5CF /* MockHTTPCookieStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPCookieStorage.swift; sourceTree = "<group>"; };
-		6E7EDDAAF13CC847CAC17FD7 /* Pods_HTTPCookieMessageHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPCookieMessageHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B4BA7E794835321D951CECD /* Pods_HTTPCookieMessageHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPCookieMessageHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7703E4D93E2058125E04BE /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandlerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		962FEC641BD12462EC16E032 /* Pods_HTTPCookieMessageHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPCookieMessageHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38ECE055499044FD63311CD /* Pods-HTTPCookieMessageHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		E37A1F0EB32758E4641CE979 /* Pods_HTTPCookieMessageHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPCookieMessageHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C689513183241C09786AF1 /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPCookieMessageHandlerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD181C0459D1E99C593160DD /* Pods_HTTPCookieMessageHandler.framework in Frameworks */,
+				C2855F82758B13E21F199C9B /* Pods_HTTPCookieMessageHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,21 +74,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				56852E8F1E66AE7E0052C449 /* HTTPCookieMessageHandler.framework in Frameworks */,
-				7FCF99C39FDB3CFE164FFDEB /* Pods_HTTPCookieMessageHandlerTests.framework in Frameworks */,
+				0AB0CC6F5096824E42654C2F /* Pods_HTTPCookieMessageHandlerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C97DE988A4F76B8E749B9EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38ECE055499044FD63311CD /* Pods-HTTPCookieMessageHandler.debug.xcconfig */,
+				49CCD21DA317559934EFD6A3 /* Pods-HTTPCookieMessageHandler.release.xcconfig */,
+				6D7703E4D93E2058125E04BE /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */,
+				E6C689513183241C09786AF1 /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		56852E7B1E66AE7D0052C449 = {
 			isa = PBXGroup;
 			children = (
 				56852E871E66AE7E0052C449 /* HTTPCookieMessageHandler */,
 				56852E921E66AE7E0052C449 /* HTTPCookieMessageHandlerTests */,
 				56852E861E66AE7E0052C449 /* Products */,
-				831EBFF5F7A09403E02FD9B9 /* Pods */,
-				B7B907A23FE5C96D3B18AC25 /* Frameworks */,
+				1C97DE988A4F76B8E749B9EC /* Pods */,
+				C76B055AD4DA5C4BEEC1AD76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,22 +157,11 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		831EBFF5F7A09403E02FD9B9 /* Pods */ = {
+		C76B055AD4DA5C4BEEC1AD76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55FF9D3696E689D61830A604 /* Pods-HTTPCookieMessageHandler.debug.xcconfig */,
-				3EB0A603CCC97C8D56A28B2E /* Pods-HTTPCookieMessageHandler.release.xcconfig */,
-				3AC17E21AFA52EB90D52510F /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */,
-				55C7F1D598E86499D314A80D /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B7B907A23FE5C96D3B18AC25 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6E7EDDAAF13CC847CAC17FD7 /* Pods_HTTPCookieMessageHandler.framework */,
-				8B4BA7E794835321D951CECD /* Pods_HTTPCookieMessageHandlerTests.framework */,
+				E37A1F0EB32758E4641CE979 /* Pods_HTTPCookieMessageHandler.framework */,
+				962FEC641BD12462EC16E032 /* Pods_HTTPCookieMessageHandlerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,12 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56852E991E66AE7E0052C449 /* Build configuration list for PBXNativeTarget "HTTPCookieMessageHandler" */;
 			buildPhases = (
-				4CB09D772B423F2EDD938412 /* [CP] Check Pods Manifest.lock */,
+				C2B85516642DADA7169FF149 /* [CP] Check Pods Manifest.lock */,
 				56852E801E66AE7E0052C449 /* Sources */,
 				56852E811E66AE7E0052C449 /* Frameworks */,
 				56852E821E66AE7E0052C449 /* Headers */,
 				56852E831E66AE7E0052C449 /* Resources */,
-				6C71A923C769F17DA6B4FD0A /* [CP] Copy Pods Resources */,
+				DB9C0400D68069B230B029F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,12 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56852E9C1E66AE7E0052C449 /* Build configuration list for PBXNativeTarget "HTTPCookieMessageHandlerTests" */;
 			buildPhases = (
-				705FA440950634E283372996 /* [CP] Check Pods Manifest.lock */,
+				BD8B6A28A671B8DC5F4C790C /* [CP] Check Pods Manifest.lock */,
 				56852E8A1E66AE7E0052C449 /* Sources */,
 				56852E8B1E66AE7E0052C449 /* Frameworks */,
 				56852E8C1E66AE7E0052C449 /* Resources */,
-				7BCEEC3E57FF280565360C92 /* [CP] Embed Pods Frameworks */,
-				E233E64971D8492AD7C68DA4 /* [CP] Copy Pods Resources */,
+				C839631AA1E13608C00AC39E /* [CP] Embed Pods Frameworks */,
+				76719B65EA65BD16C4BFFADB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,22 +282,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CB09D772B423F2EDD938412 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6C71A923C769F17DA6B4FD0A /* [CP] Copy Pods Resources */ = {
+		76719B65EA65BD16C4BFFADB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,10 +294,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		705FA440950634E283372996 /* [CP] Check Pods Manifest.lock */ = {
+		BD8B6A28A671B8DC5F4C790C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,7 +312,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7BCEEC3E57FF280565360C92 /* [CP] Embed Pods Frameworks */ = {
+		C2B85516642DADA7169FF149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C839631AA1E13608C00AC39E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,7 +342,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E233E64971D8492AD7C68DA4 /* [CP] Copy Pods Resources */ = {
+		DB9C0400D68069B230B029F8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPCookieMessageHandlerTests/Pods-HTTPCookieMessageHandlerTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPCookieMessageHandler/Pods-HTTPCookieMessageHandler-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,7 +497,7 @@
 		};
 		56852E9A1E66AE7E0052C449 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55FF9D3696E689D61830A604 /* Pods-HTTPCookieMessageHandler.debug.xcconfig */;
+			baseConfigurationReference = C38ECE055499044FD63311CD /* Pods-HTTPCookieMessageHandler.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -520,7 +520,7 @@
 		};
 		56852E9B1E66AE7E0052C449 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EB0A603CCC97C8D56A28B2E /* Pods-HTTPCookieMessageHandler.release.xcconfig */;
+			baseConfigurationReference = 49CCD21DA317559934EFD6A3 /* Pods-HTTPCookieMessageHandler.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -542,7 +542,7 @@
 		};
 		56852E9D1E66AE7E0052C449 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AC17E21AFA52EB90D52510F /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */;
+			baseConfigurationReference = 6D7703E4D93E2058125E04BE /* Pods-HTTPCookieMessageHandlerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -559,7 +559,7 @@
 		};
 		56852E9E1E66AE7E0052C449 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55C7F1D598E86499D314A80D /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */;
+			baseConfigurationReference = E6C689513183241C09786AF1 /* Pods-HTTPCookieMessageHandlerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;

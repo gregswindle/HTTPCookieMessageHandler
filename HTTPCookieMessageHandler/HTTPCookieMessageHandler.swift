@@ -14,7 +14,7 @@ public class HTTPCookieMessageHandler: MessageHandler {
 
   //public typealias StorageItemType = HTTPCookieStorage
 
-  private var defaultSaveAllOptions: Dictionary<String, String> = [
+  private var defaultSaveAllOptions: [String: String] = [
     "forUrl": "https://verizon.com"
   ]
 
@@ -38,7 +38,7 @@ public class HTTPCookieMessageHandler: MessageHandler {
   /// - parameter options: A dictionary of named values.
   /// - parameter callbackPredicate: The callback function to tell whether element is found.
   /// - returns: Optional containing either found element or nil.
-  public func find(_ options: Dictionary<String, Any>? = nil, _ callbackPredicate: (ItemType) -> Bool) -> ItemType? {
+  public func find(_ options: [String: Any]? = nil, _ callbackPredicate: (ItemType) -> Bool) -> ItemType? {
     var cookies: [ItemType]
     if let url = makeURL(options) {
       cookies = dataStore.cookies(for: url)!
@@ -54,12 +54,12 @@ public class HTTPCookieMessageHandler: MessageHandler {
     self.dataStore.setCookie(cookie)
   }
 
-  public func save(_ options: Dictionary<String, Any>? = nil, items: [ItemType]) {
+  public func save(_ options: [String: Any]? = nil, items: [ItemType]) {
     let url = makeURL(options)
     dataStore.setCookies(items, for: url, mainDocumentURL: nil)
   }
 
-  internal func makeURL(_ options: Dictionary<String, Any>?) -> URL? {
+  internal func makeURL(_ options: [String: Any]?) -> URL? {
     if let urlString = options?["forUrl"] as! String? {
       return URL(string: urlString)
     }

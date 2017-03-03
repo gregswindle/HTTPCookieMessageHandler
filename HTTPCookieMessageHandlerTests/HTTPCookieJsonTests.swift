@@ -17,7 +17,7 @@ class HTTPCookieJsonSpec: QuickSpec {
     describe("HTTPCookieJson serializes and deserializes HTTPCookies to from JSON") {
 
       var cookie: HTTPCookie!
-      var cookieProperties: Dictionary<HTTPCookiePropertyKey, Any>!
+      var cookieProperties: [HTTPCookiePropertyKey: Any]!
 
       beforeEach {
         cookieProperties = [HTTPCookiePropertyKey: Any]()
@@ -39,8 +39,8 @@ class HTTPCookieJsonSpec: QuickSpec {
       }
 
       it("serializes an HTTPCookie to a JSON Dictionary") {
-        let json: Dictionary<String, Any> = HTTPCookieJson.dictionary(cookie: cookie)
-        expect(json).to(beAnInstanceOf(Dictionary<String, Any>.self))
+        let json: [String: Any] = HTTPCookieJson.dictionary(cookie: cookie)
+        expect(json).to(beAnInstanceOf([String: Any].self))
         expect(json.keys).to(haveCount(6))
         expect(json.values).to(haveCount(6))
         let cookieName: String = String(describing: json["Name"])

@@ -19,15 +19,15 @@ public class MockHTTPCookieFactory {
     self.fixtureFilePath = String(describing: TEST_DIR + "/Fixtures/Cookies.json")
   }
 
-  public func makeHTTPCookieMocks() -> Array<HTTPCookie> {
-    let smsessionDictionary: Dictionary<HTTPCookiePropertyKey, Any> = [
+  public func makeHTTPCookieMocks() -> [HTTPCookie] {
+    let smsessionDictionary: [HTTPCookiePropertyKey: Any] = [
       HTTPCookiePropertyKey.name: "SMSESSION",
       HTTPCookiePropertyKey.value: "1",
       HTTPCookiePropertyKey.domain: "verizon.com",
       HTTPCookiePropertyKey.path: "/",
       HTTPCookiePropertyKey.secure: true
     ]
-    let persistentDictionary: Dictionary<HTTPCookiePropertyKey, Any> = [
+    let persistentDictionary: [HTTPCookiePropertyKey: Any] = [
       HTTPCookiePropertyKey.name: "__invasive_marketing_spy",
       HTTPCookiePropertyKey.value: "the-number-of-the-beast",
       HTTPCookiePropertyKey.domain: "yoyodyne.com",
@@ -38,7 +38,7 @@ public class MockHTTPCookieFactory {
     ]
     let smsessionHTTPCookie = HTTPCookie(properties: smsessionDictionary)
     let persistentHTTPCookie = HTTPCookie(properties: persistentDictionary)
-    let mockCookies: Array<HTTPCookie> = [
+    let mockCookies: [HTTPCookie] = [
       smsessionHTTPCookie!,
       persistentHTTPCookie!
     ]

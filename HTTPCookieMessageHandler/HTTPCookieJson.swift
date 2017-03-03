@@ -11,8 +11,8 @@ import SwiftyJSON
 
 public class HTTPCookieJson {
 
-  public static func dictionary(cookie: HTTPCookie) -> Dictionary<String, Any> {
-    var cookieDictionary = Dictionary<String, Any>()
+  public static func dictionary(cookie: HTTPCookie) -> [String: Any] {
+    var cookieDictionary = [String: Any]()
     cookieDictionary[HTTPCookiePropertyKey.name.rawValue] = cookie.name
     cookieDictionary[HTTPCookiePropertyKey.value.rawValue] = cookie.value
     cookieDictionary[HTTPCookiePropertyKey.comment.rawValue] = cookie.comment
@@ -29,8 +29,8 @@ public class HTTPCookieJson {
     return JSON(dictionary(cookie: cookie)).rawString()!
   }
 
-  public static func cookie(dictionary: Dictionary<HTTPCookiePropertyKey, Any>!) -> HTTPCookie {
-    var cookieDictionary = Dictionary<HTTPCookiePropertyKey, Any>()
+  public static func cookie(dictionary: [HTTPCookiePropertyKey: Any]!) -> HTTPCookie {
+    var cookieDictionary = [HTTPCookiePropertyKey: Any]()
     for key in dictionary.keys {
       cookieDictionary[key] = dictionary[key].unsafelyUnwrapped
     }

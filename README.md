@@ -84,9 +84,10 @@ If your Xcode project is open, close it and **reopen the `*.xcworkspace`, _not_ 
 
 * [Slather](https://github.com/SlatherOrg/slather) for detailed code coverage reports.
 
-* [Cuckoo](https://github.com/SwiftKit/Cuckoo) for mocks and stubs
+* ~~[Cuckoo](https://github.com/SwiftKit/Cuckoo) for mocks and stubs~~
 
-> **Mocks?** Swift doesn't handle stubs and mocks well, and the libraries I've tried so far have been more trouble then they're worth. I'm currently rolling my own mocks, as suggested in [Real World Mocking in Swift](https://realm.io/news/tryswift-veronica-ray-real-world-mocking-swift/). I'm working on it.... :sweat:
+> **Mocks** Swift doesn't handle stubs and mocks well, and four libraries later,
+> I ended up building my own, based on suggestions in the article [Real World Mocking in Swift](https://realm.io/news/tryswift-veronica-ray-real-world-mocking-swift/). Check out the simple [`called` Dictionary](https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler/blob/develop/HTTPCookieMessageHandlerTests/HTTPCookieMessageHandlerTests.swift#L66) I created for details.
 
 ## Additional notes
 

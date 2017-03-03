@@ -47,8 +47,8 @@ class HTTPCookieMessageHandlerSpec: QuickSpec {
         expect(cookie.domain).to(contain("verizon.com"))
       }
 
-      it("can search for cookies in the cookie store using a Dictionary<String, Any> for options and a callback predicate") {
-        let options: Dictionary<String, Any> = [
+      it("can search for cookies in the cookie store using a [String: Any] for options and a callback predicate") {
+        let options: [String: Any] = [
           "forUrl": "https://verizon.com"
         ]
         cookie = cookieHandler.find(options) { $0.name == "UNDEFINED_COOKIE" }
