@@ -29,7 +29,7 @@ target 'HTTPCookieMessageHandler' do
     pod 'Nimble'
 
     # Mocks and stubs
-    pod 'Cuckoo'
+
 
     # Code coverage
     # plugin 'slather'

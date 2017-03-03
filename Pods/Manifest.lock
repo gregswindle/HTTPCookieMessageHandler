@@ -1,24 +1,21 @@
 PODS:
-  - Cuckoo (0.8.3)
   - Nimble (6.0.1)
   - Quick (1.1.0)
   - SwiftLint (0.16.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Cuckoo
   - Nimble
   - Quick
   - SwiftLint
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Cuckoo: 2daf5d23383c0a24cd60b73287a5813af4793add
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 67cfc7ebf937f78f5cf5e2808fced5e9f1bb5629
+PODFILE CHECKSUM: bc9a62709089bbe81bf6aa8655c69f8d1673c98b
 
 COCOAPODS: 1.2.0
