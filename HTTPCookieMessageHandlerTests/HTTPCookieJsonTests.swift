@@ -53,6 +53,12 @@ class HTTPCookieJsonSpec: QuickSpec {
         expect(smsessionCookie.path).to(contain("/"))
       }
 
+      it("maps an HTTPCookie to a JSON serializable object") {
+        let jsonString = HTTPCookieJson.rawString(cookie: cookie)
+        let cookieObject = HTTPCookieJson(map: jsonString)
+        print(cookieObject)
+      }
+
     }
 
   }
