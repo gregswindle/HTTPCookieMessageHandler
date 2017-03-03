@@ -10,10 +10,10 @@ import Quick
 import Nimble
 import HTTPCookieMessageHandler
 
-class HTTPCookieMessageHandlerSpec : QuickSpec {
+class HTTPCookieMessageHandlerSpec: QuickSpec {
 
     override func spec() {
-    
+
     describe("HTTPCookieMessageHandler") {
 
       let SMSESSION: Int = 0
@@ -27,12 +27,12 @@ class HTTPCookieMessageHandlerSpec : QuickSpec {
         factory = MockHTTPCookieFactory()
         cookies = factory.makeHTTPCookieMocks()
       }
-      
+
       beforeEach {
         mockDataStore = MockHTTPCookieStorage()
         cookieHandler = HTTPCookieMessageHandler(dataStore: mockDataStore)
       }
-      
+
       it("will use the HTTPCookieStorage.shared cookie jar by default") {
         cookieHandler = HTTPCookieMessageHandler()
         expect(cookieHandler.dataStore).notTo(equal(mockDataStore))
@@ -67,7 +67,7 @@ class HTTPCookieMessageHandlerSpec : QuickSpec {
       }
 
       it("can save multiple cookies") {
-        cookieHandler.save(["forUrl": "https://verizon.com"], items: cookies);
+        cookieHandler.save(["forUrl": "https://verizon.com"], items: cookies)
         expect(mockDataStore.called["setCookie:for"]).to(beTrue())
       }
     }

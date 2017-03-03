@@ -26,7 +26,7 @@ public class HTTPCookieJson {
   }
 
   public static func rawString(cookie: HTTPCookie) -> String {
-    return JSON(dictionary(cookie: cookie)).rawString()!;
+    return JSON(dictionary(cookie: cookie)).rawString()!
   }
 
   public static func cookie(dictionary: Dictionary<HTTPCookiePropertyKey, Any>!) -> HTTPCookie {

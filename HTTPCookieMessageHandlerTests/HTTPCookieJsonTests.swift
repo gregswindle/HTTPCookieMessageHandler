@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import HTTPCookieMessageHandler
 
-class HTTPCookieJsonSpec : QuickSpec {
+class HTTPCookieJsonSpec: QuickSpec {
   override func spec() {
 
     describe("HTTPCookieJson serializes and deserializes HTTPCookies to from JSON") {
@@ -27,11 +27,11 @@ class HTTPCookieJsonSpec : QuickSpec {
         cookieProperties[HTTPCookiePropertyKey.domain] = ".verizon.com"
         cookieProperties[HTTPCookiePropertyKey.expires] = HTTPCookieJson.date(httpDate:"Thu, 09 Mar 2017 23:39:40 GMT")
 
-        cookie = HTTPCookie(properties: cookieProperties);
+        cookie = HTTPCookie(properties: cookieProperties)
       }
 
       it("serializes an HTTPCookie to a JSON string") {
-        let json = HTTPCookieJson.rawString(cookie: cookie);
+        let json = HTTPCookieJson.rawString(cookie: cookie)
         expect(json).to(beAnInstanceOf(String.self))
         expect(json).to(contain("Expires"))
         expect(json).to(contain("SMSESSION"))
@@ -39,7 +39,7 @@ class HTTPCookieJsonSpec : QuickSpec {
       }
 
       it("serializes an HTTPCookie to a JSON Dictionary") {
-        let json: Dictionary<String, Any> = HTTPCookieJson.dictionary(cookie: cookie);
+        let json: Dictionary<String, Any> = HTTPCookieJson.dictionary(cookie: cookie)
         expect(json).to(beAnInstanceOf(Dictionary<String, Any>.self))
         expect(json.keys).to(haveCount(6))
         expect(json.values).to(haveCount(6))
@@ -49,7 +49,7 @@ class HTTPCookieJsonSpec : QuickSpec {
 
       it("serializes a dictionary to an HTTPCookie") {
         let smsessionCookie = HTTPCookieJson.cookie(dictionary: cookieProperties)
-        expect(smsessionCookie.name).to(contain("SMSESSION"));
+        expect(smsessionCookie.name).to(contain("SMSESSION"))
         expect(smsessionCookie.path).to(contain("/"))
       }
 

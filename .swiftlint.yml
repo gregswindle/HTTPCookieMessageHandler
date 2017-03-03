@@ -1,0 +1,4 @@
+excluded:
+  - ci-cd
+  - HTTPCookieMessageHandlerTests/Reports
+  - Pods

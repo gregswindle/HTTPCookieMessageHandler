@@ -10,30 +10,30 @@ import Foundation
 import SwiftyJSON
 
 public class MockHTTPCookieFactory {
-  
+
   let TEST_DIR: String = "/Users/v128477/Projects/sandbox/sso/ios/swift/HTTPCookieMessageHandler/CookieMessageHandlerTests"
-  
+
   public var fixtureFilePath: String!
-  
+
   public init() {
     self.fixtureFilePath = String(describing: TEST_DIR + "/Fixtures/Cookies.json")
   }
-  
+
   public func makeHTTPCookieMocks() -> Array<HTTPCookie> {
     let smsessionDictionary: Dictionary<HTTPCookiePropertyKey, Any> = [
-      HTTPCookiePropertyKey.name    : "SMSESSION",
-      HTTPCookiePropertyKey.value   : "1",
-      HTTPCookiePropertyKey.domain  : "verizon.com",
-      HTTPCookiePropertyKey.path    : "/",
-      HTTPCookiePropertyKey.secure  : true
+      HTTPCookiePropertyKey.name: "SMSESSION",
+      HTTPCookiePropertyKey.value: "1",
+      HTTPCookiePropertyKey.domain: "verizon.com",
+      HTTPCookiePropertyKey.path: "/",
+      HTTPCookiePropertyKey.secure: true
     ]
     let persistentDictionary: Dictionary<HTTPCookiePropertyKey, Any> = [
-      HTTPCookiePropertyKey.name                 : "__invasive_marketing_spy",
-      HTTPCookiePropertyKey.value                : "the-number-of-the-beast",
-      HTTPCookiePropertyKey.domain               : "yoyodyne.com",
-      HTTPCookiePropertyKey.path                 : "/",
-      HTTPCookiePropertyKey.secure               : false,
-      HTTPCookiePropertyKey.expires              : Date.distantFuture,
+      HTTPCookiePropertyKey.name: "__invasive_marketing_spy",
+      HTTPCookiePropertyKey.value: "the-number-of-the-beast",
+      HTTPCookiePropertyKey.domain: "yoyodyne.com",
+      HTTPCookiePropertyKey.path: "/",
+      HTTPCookiePropertyKey.secure: false,
+      HTTPCookiePropertyKey.expires: Date.distantFuture,
       HTTPCookiePropertyKey(rawValue: "HttpOnly"): true
     ]
     let smsessionHTTPCookie = HTTPCookie(properties: smsessionDictionary)
@@ -44,7 +44,7 @@ public class MockHTTPCookieFactory {
     ]
     return mockCookies
   }
-  
+
   public func makeFixtures() -> [HTTPCookie] {
     var cookieFixture: [HTTPCookie] = []
     let cookieStrings: String = cookieFixturesFromFile()
@@ -57,9 +57,9 @@ public class MockHTTPCookieFactory {
     }
     return cookieFixture
   }
-  
+
   internal func cookieFixturesFromFile() -> String {
     return try! String(contentsOfFile: self.fixtureFilePath, encoding: .utf8)
   }
-  
+
 }

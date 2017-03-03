@@ -9,19 +9,19 @@
 import Foundation
 
 public class HTTPCookieMessageHandler: MessageHandler {
-  
+
   public typealias ItemType = HTTPCookie
-  
+
   //public typealias StorageItemType = HTTPCookieStorage
-  
+
   private var defaultSaveAllOptions: Dictionary<String, String> = [
     "forUrl": "https://verizon.com"
   ]
-  
+
   public var message: HTTPCookieMessage
-  
+
   public var dataStore: HTTPCookieStorage!
-  
+
   public init(acceptPolicy: ItemType.AcceptPolicy? = ItemType.AcceptPolicy.always, dataStore: HTTPCookieStorage? = nil) {
     if (dataStore != nil) {
       self.dataStore = dataStore!
@@ -31,7 +31,7 @@ public class HTTPCookieMessageHandler: MessageHandler {
     self.dataStore.cookieAcceptPolicy = acceptPolicy!
     message = HTTPCookieMessage("/auth/sessions/all/smsession/token")
   }
-  
+
   /// Iterates over elements of an array and returning the first element
   /// that the callback returns true for.
   ///
@@ -42,24 +42,23 @@ public class HTTPCookieMessageHandler: MessageHandler {
     var cookies: [ItemType]
     if let url = makeURL(options) {
       cookies = dataStore.cookies(for: url)!
-    }
-    else {
+    } else {
       cookies = dataStore.cookies!
     }
     let results = cookies.filter { return callbackPredicate($0) }
     return (results.isEmpty) ? .none : results.first!
   }
-  
+
   public func save(item: ItemType) {
     let cookie = item
     self.dataStore.setCookie(cookie)
   }
-  
+
   public func save(_ options: Dictionary<String, Any>? = nil, items: [ItemType]) {
     let url = makeURL(options)
     dataStore.setCookies(items, for: url, mainDocumentURL: nil)
   }
-  
+
   internal func makeURL(_ options: Dictionary<String, Any>?) -> URL? {
     if let urlString = options?["forUrl"] as! String? {
       return URL(string: urlString)
