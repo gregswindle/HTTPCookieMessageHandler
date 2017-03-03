@@ -12,17 +12,24 @@ public class HTTPCookieMessageHandler: MessageHandler {
   
   public typealias ItemType = HTTPCookie
   
-  public typealias StorageItemType = HTTPCookieStorage
+  //public typealias StorageItemType = HTTPCookieStorage
   
   private var defaultSaveAllOptions: Dictionary<String, String> = [
     "forUrl": "https://verizon.com"
   ]
   
-  public var dataStore: StorageItemType!
+  public var message: HTTPCookieMessage
   
-  public init(acceptPolicy: ItemType.AcceptPolicy? = ItemType.AcceptPolicy.always) {
-    dataStore = StorageItemType.shared
-    dataStore.cookieAcceptPolicy = acceptPolicy!
+  public var dataStore: HTTPCookieStorage!
+  
+  public init(acceptPolicy: ItemType.AcceptPolicy? = ItemType.AcceptPolicy.always, dataStore: HTTPCookieStorage? = nil) {
+    if (dataStore != nil) {
+      self.dataStore = dataStore!
+    } else {
+      self.dataStore = HTTPCookieStorage.shared
+    }
+    self.dataStore.cookieAcceptPolicy = acceptPolicy!
+    message = HTTPCookieMessage("/auth/sessions/all/smsession/token")
   }
   
   /// Iterates over elements of an array and returning the first element
@@ -39,12 +46,8 @@ public class HTTPCookieMessageHandler: MessageHandler {
     else {
       cookies = dataStore.cookies!
     }
-    for cookie in cookies {
-      if callbackPredicate(cookie) {
-        return cookie
-      }
-    }
-    return .none
+    let results = cookies.filter { return callbackPredicate($0) }
+    return (results.isEmpty) ? .none : results.first!
   }
   
   public func save(item: ItemType) {

@@ -17,18 +17,25 @@ class HTTPCookieMessageHandlerSpec : QuickSpec {
     describe("HTTPCookieMessageHandler") {
 
       let SMSESSION: Int = 0
+      var mockDataStore = MockHTTPCookieStorage()
       var cookie: HTTPCookie!
       var cookieHandler: HTTPCookieMessageHandler!
-      var shared: HTTPCookieStorage!
       var factory: MockHTTPCookieFactory!
       var cookies: [HTTPCookie]!
 
       beforeSuite {
         factory = MockHTTPCookieFactory()
-        cookieHandler = HTTPCookieMessageHandler()
-        shared = MockHTTPCookieStorage(testCase: self)
-        cookieHandler.dataStore = shared
         cookies = factory.makeHTTPCookieMocks()
+      }
+      
+      beforeEach {
+        mockDataStore = MockHTTPCookieStorage()
+        cookieHandler = HTTPCookieMessageHandler(dataStore: mockDataStore)
+      }
+      
+      it("will use the HTTPCookieStorage.shared cookie jar by default") {
+        cookieHandler = HTTPCookieMessageHandler()
+        expect(cookieHandler.dataStore).notTo(equal(mockDataStore))
       }
 
       it("can search for cookies in the cookie store with a truth-predicate callback but without options") {
@@ -54,17 +61,14 @@ class HTTPCookieMessageHandlerSpec : QuickSpec {
 
       it("can save a single cookie") {
         cookie = cookies[SMSESSION]
+        cookieHandler.dataStore = mockDataStore
         cookieHandler.save(item: cookie)
-        // This is NOT the way to unit test! It'll have to suffice while I figure out mocks in Swift...
-        expect(cookieHandler.dataStore.cookies!.count).to(beGreaterThanOrEqualTo(1))
-        cookieHandler.dataStore.deleteCookie(cookie)
+        expect(mockDataStore.called["setCookie"]).to(beTrue())
       }
 
       it("can save multiple cookies") {
         cookieHandler.save(["forUrl": "https://verizon.com"], items: cookies);
-        // This is NOT the way to unit test! It'll have to suffice while I figure out mocks in Swift...
-        expect(cookieHandler.dataStore.cookies!.count).to(beGreaterThanOrEqualTo(1))
-        cookieHandler.dataStore.removeCookies(since: Date.distantPast)
+        expect(mockDataStore.called["setCookie:for"]).to(beTrue())
       }
     }
   }

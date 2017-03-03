@@ -84,6 +84,8 @@ If your Xcode project is open, close it and **reopen the `*.xcworkspace`, _not_ 
 
 * [Slather](https://github.com/SlatherOrg/slather) for detailed code coverage reports.
 
+* [Cuckoo](https://github.com/SwiftKit/Cuckoo) for mocks and stubs
+
 > **Mocks?** Swift doesn't handle stubs and mocks well, and the libraries I've tried so far have been more trouble then they're worth. I'm currently rolling my own mocks, as suggested in [Real World Mocking in Swift](https://realm.io/news/tryswift-veronica-ray-real-world-mocking-swift/). I'm working on it.... :sweat:
 
 ## Additional notes

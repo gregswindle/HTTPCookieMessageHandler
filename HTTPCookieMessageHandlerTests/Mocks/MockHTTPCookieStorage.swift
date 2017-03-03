@@ -15,32 +15,32 @@ public class MockHTTPCookieStorage: HTTPCookieStorage {
   public var smsessionHTTPCookieFixturePath = "Fixtures/SMSESSIONCookie.json"
   public var httpCookiesFixturePath = "Fixtures/Cookies.json"
   
+  public var called: [String:Bool]! = [
+    "setCookie": false,
+    "setCookies:for": false,
+    "cookies": false,
+    "cookies:for": false,
+    "shared": false
+  ]
   
   override public var cookies: [HTTPCookie]? {
     get {
-      //self.callToMethod["cookies"] = true
-      return self.factory.makeHTTPCookieMocks()
+      called["cookies"] = true
+      return factory.makeHTTPCookieMocks()
     }
   }
   
   override public func cookies(for URL: URL) -> [HTTPCookie]? {
-    //self.callToMethod["cookies:for"] = true
+    called["cookies:for"] = true
     return self.factory.makeHTTPCookieMocks()
   }
   
   override public func setCookie(_ cookie: HTTPCookie) {
-    //self.callToMethod["setCookie"] = true
+    called["setCookie"] = true
   }
   
   override public func setCookies(_ cookies: [HTTPCookie], for URL: URL?, mainDocumentURL: URL?) {
-    //self.callToMethod["setCookies:for"] = true
+    called["setCookie:for"] = true
   }
-  
-//  override public class var shared: HTTPCookieStorage {
-//    get {
-//      //callToMethod["shared"] = true
-//      return MockHTTPCookieStorage(testCase: QuickSpec)
-//    }
-//  }
-  
+
 }
