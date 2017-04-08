@@ -1,5 +1,7 @@
 # `HTTPCookieMessageHandler`
 
+> Send and receive HTTPCookies formatted as JSON over HTTP(S).
+
 [![CI Status](http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://travis-ci.org/gregswindle/HTTPCookieMessageHandler)
 [![Version](https://img.shields.io/cocoapods/v/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![License](https://img.shields.io/cocoapods/l/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
@@ -189,7 +191,7 @@ Set-Cookie: SMCHALLENGE=; Expires=Sat, 27 Aug 2016 23:46:21 GMT; Path=/; Domain=
 
 ## Author
 
-Greg Swindle, gregory.jay.swindle@one.verizon.com
+[Greg Swindle](mailto:gregory.jay.swindle@one.verizon.com)
 
 ## License
 
