@@ -3,7 +3,7 @@
 > Send and receive `HTTPCookies` formatted as `JSON` over `HTTP(S)`.
 
 [![CI Status](http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://travis-ci.org/gregswindle/HTTPCookieMessageHandler?branch=develop)
-[![Coverage Status](https://img.shields.io/coveralls/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://coveralls.io/r/gregswindle/HTTPCookieMessageHandler?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/gregswindle/HTTPCookieMessageHandler/badge.svg?branch=feat%2F%231%2Fautomate-coverage-coveralls)](https://coveralls.io/github/gregswindle/HTTPCookieMessageHandler?branch=feat%2F%231%2Fautomate-coverage-coveralls)
 [![Version](https://img.shields.io/cocoapods/v/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![License](https://img.shields.io/cocoapods/l/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![Platform](https://img.shields.io/cocoapods/p/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
