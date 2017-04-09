@@ -7,16 +7,17 @@ before_install: rvm use $RVM_RUBY_VERSION
 install: bundle install
 
 script:
-- set -o pipefail
-- xcodebuild \
-   -workspace 'HTTPCookieMessageHandler.xcworkspace' \
-   -scheme 'HTTPCookieMessageHandler' \
-   -configuration 'Debug' \
-   -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' \
-   -enableCodeCoverage YES \
-   TRAVIS=true \
-   build test \
-  | xcpretty -f `xcpretty-travis-formatter` --no-utf
-- pod lib lint --quick --allow-warnings
+  - slather setup HTTPCookieMessageHandler.xcodeproj
+  - set -o pipefail
+  - xcodebuild clean \
+     -workspace HTTPCookieMessageHandler.xcworkspace \
+     -scheme HTTPCookieMessageHandler \
+     -configuration Debug \
+     -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' \
+     -enableCodeCoverage YES \
+     TRAVIS=true \
+     build test \
+    | xcpretty -f `xcpretty-travis-formatter` --no-utf
+  - pod lib lint --quick --allow-warnings
 
 after_success: slather
