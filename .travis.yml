@@ -1,25 +1,22 @@
 sudo: false
 rvm: 2.4.0
 language: swift
-cache:
-  - bundler
-  - cocoapods
 osx_image: xcode8.3
 
-# before_install: rvm install $RVM_RUBY_VERSION
+before_install:
+  - pwd
+  - ls -la
+  - gem install cocoapods
 install: bundle install
 
 script:
-  - slather setup HTTPCookieMessageHandler.xcodeproj
   - set -o pipefail
-  - xcodebuild clean \
-     -workspace HTTPCookieMessageHandler.xcworkspace \
-     -scheme HTTPCookieMessageHandler \
-     -configuration Debug \
-     -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' \
-     -enableCodeCoverage YES \
-     build test \
-    | xcpretty -f `xcpretty-travis-formatter` --no-utf
+  - xcodebuild clean workspace HTTPCookieMessageHandler.xcworkspace scheme HTTPCookieMessageHandler configuration Debug destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' enableCodeCoverage YES test-without-building xcpretty -f `xcpretty-travis-formatter` --no-utf
   - pod lib lint --quick --allow-warnings
 
 after_success: slather
+cache:
+  directories:
+    - '$HOME/.bundle/cache'
+    - '$HOME/.cocoapods/cache'
+    - '$HOME/.gem/cache'
