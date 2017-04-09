@@ -3,13 +3,13 @@
 # $ slather coverage --output-directory HTTPCookieMessageHandler/Reports/Coverage --html --show --scheme HTTPCookieMessageHandler --workspace HTTPCookieMessageHandler.xcworkspace HTTPCookieMessageHandler.xcodeproj
 # xcodebuild -scheme HTTPCookieMessageHandler -workspace HTTPCookieMessageHandler.xcworkspace -showBuildSettings | grep " OBJROOT"
 
-ci_service: travis_ci
-# coverage_service: html
-coverage_service: coveralls
+#ci_service: travis_ci
+coverage_service: html
+#coverage_service: coveralls
 source_directory: HTTPCookieMessageHandler
 xcodeproj: HTTPCookieMessageHandler.xcodeproj
 scheme: HTTPCookieMessageHandler
-output_directory: HTTPCookieMessageHandlerTests/Reports/Coverage
+# output_directory: HTTPCookieMessageHandlerTests/Reports/Coverage
 workspace: HTTPCookieMessageHandler.xcworkspace
 ignore:
 - "Pods/*"

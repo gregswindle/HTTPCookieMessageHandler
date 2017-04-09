@@ -10,15 +10,15 @@ import Foundation
 import SwiftyJSON
 
 public class MockHTTPCookieFactory {
-    
+
     let TEST_DIR: String = "/Users/v128477/Projects/sandbox/sso/ios/swift/HTTPCookieMessageHandler/CookieMessageHandlerTests"
-    
+
     public var fixtureFilePath: String!
-    
+
     public init() {
         self.fixtureFilePath = String(describing: TEST_DIR + "/Fixtures/Cookies.json")
     }
-    
+
     public func makeHTTPCookieMocks() -> [HTTPCookie] {
         let smsessionDictionary: [HTTPCookiePropertyKey: Any] = [
             HTTPCookiePropertyKey.name: "SMSESSION",
@@ -44,7 +44,7 @@ public class MockHTTPCookieFactory {
         ]
         return mockCookies
     }
-    
+
     public func makeFixtures() -> [HTTPCookie] {
         var cookieFixture: [HTTPCookie] = []
         let cookieStrings: String = cookieFixturesFromFile()
@@ -57,9 +57,9 @@ public class MockHTTPCookieFactory {
         }
         return cookieFixture
     }
-    
+
     internal func cookieFixturesFromFile() -> String {
         return try! String(contentsOfFile: self.fixtureFilePath, encoding: .utf8)
     }
-    
+
 }
