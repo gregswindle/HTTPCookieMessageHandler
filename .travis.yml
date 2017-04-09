@@ -1,9 +1,12 @@
 sudo: false
+rvm: 2.4.0
 language: swift
-cache: cocoapods
+cache:
+  - bundler
+  - cocoapods
 osx_image: xcode8.3
 
-before_install: rvm install $RVM_RUBY_VERSION
+# before_install: rvm install $RVM_RUBY_VERSION
 install: bundle install
 
 script:
@@ -15,7 +18,6 @@ script:
      -configuration Debug \
      -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' \
      -enableCodeCoverage YES \
-     TRAVIS=true \
      build test \
     | xcpretty -f `xcpretty-travis-formatter` --no-utf
   - pod lib lint --quick --allow-warnings
