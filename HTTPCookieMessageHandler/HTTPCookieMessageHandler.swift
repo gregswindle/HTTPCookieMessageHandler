@@ -61,8 +61,8 @@ public class HTTPCookieMessageHandler: MessageHandler {
     }
 
     internal func makeURL(_ options: [String: Any]?) -> URL? {
-        if let urlString = options?["forUrl"] as? String? {
-            return URL(string: urlString!)
+        if let urlString = options?["forUrl"] as? String {
+            return URL(string: urlString)
         }
         return .none
     }
