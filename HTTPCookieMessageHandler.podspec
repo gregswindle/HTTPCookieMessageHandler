@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HTTPCookieMessageHandler"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "A JSON parser and storage handler for HTTPCookies."
 
   # This description is used to generate tags and improve search results.
