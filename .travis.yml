@@ -10,11 +10,13 @@ before_install:
 install: bundle install
 
 script:
+  - xcodebuild -list
+  - pod lib lint --quick --allow-warnings
   - set -o pipefail
   - xcodebuild clean -workspace HTTPCookieMessageHandler.xcworkspace -scheme HTTPCookieMessageHandler -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter` --no-utf
-  - pod lib lint --quick --allow-warnings
 
 after_success: slather
+
 cache:
   directories:
     - '$HOME/.bundle/cache'
