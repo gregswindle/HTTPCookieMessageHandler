@@ -32,7 +32,7 @@ target 'HTTPCookieMessageHandler' do
 
 
     # Code coverage
-    # plugin 'slather'
+    plugin 'slather'
   end
 
 

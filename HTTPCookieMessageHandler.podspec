@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "Use JSON to exchange Cookies, then parse or serialize them for storage."
 
-  s.homepage     = "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler"
+  s.homepage     = "https://github.com/gregswindle/HTTPCookieMessageHandler"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Swindle, Gregory Jay (Greg)" => "gregory.jay.swindle@one.verizon.com" }
+  s.author             = { "Swindle, Gregory Jay (Greg)" => "greg@swindle.net" }
   # Or just: s.author    = "Swindle, Gregory Jay (Greg)"
   # s.authors            = { "Swindle, Gregory Jay (Greg)" => "gregory.jay.swindle@one.verizon.com" }
   # s.social_media_url   = "http://twitter.com/Swindle, Gregory Jay (Greg)"
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "9.3"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -77,9 +77,9 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-  s.source        = { :git => "ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git" }
+  # s.source        = { :git => "ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git" }
   # s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler.git" } #, :tag => "#{s.version}" }
-  # s.source       = { :git => "git@githubpoc.ebiz.verizon.com:v128477/HTTPCookieMessageHandler.git"}
+  s.source       = { :git => "https://github.com/gregswindle/HTTPCookieMessageHandler.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

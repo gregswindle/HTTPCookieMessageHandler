@@ -1,0 +1,10 @@
+sudo: false
+language: swift # or objective-c
+cache: cocoapods
+osx_image: xcode8.3
+
+script:
+- set -o pipefail && xcodebuild test -workspace HTTPCookieMessageHandler.xcworkspace -scheme HTTPCookieMessageHandler -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3.5' ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- pod lib lint --quick --allow-warnings
+
+after_success: slather

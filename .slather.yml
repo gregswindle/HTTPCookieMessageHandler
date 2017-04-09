@@ -1,8 +1,11 @@
 # .slather.yml
 # Generate an HTML coverage report from your CLI, inside the project's root directory:
 # $ slather coverage --output-directory HTTPCookieMessageHandler/Reports/Coverage --html --show --scheme HTTPCookieMessageHandler --workspace HTTPCookieMessageHandler.xcworkspace HTTPCookieMessageHandler.xcodeproj
+# xcodebuild -scheme HTTPCookieMessageHandler -workspace HTTPCookieMessageHandler.xcworkspace -showBuildSettings | grep " OBJROOT"
 
-coverage_service: html
+ci_service: travis_ci
+# coverage_service: html
+coverage_service: coveralls
 source_directory: HTTPCookieMessageHandler
 xcodeproj: HTTPCookieMessageHandler.xcodeproj
 scheme: HTTPCookieMessageHandler

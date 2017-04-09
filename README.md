@@ -1,46 +1,49 @@
 # `HTTPCookieMessageHandler`
 
-> Send and receive HTTPCookies formatted as JSON over HTTP(S).
+> Send and receive `HTTPCookies` formatted as `JSON` over `HTTP(S)`.
 
-[![CI Status](http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://travis-ci.org/gregswindle/HTTPCookieMessageHandler)
+[![CI Status](http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://travis-ci.org/gregswindle/HTTPCookieMessageHandler?branch=develop)
+[![Coverage Status](https://img.shields.io/coveralls/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://coveralls.io/r/gregswindle/HTTPCookieMessageHandler?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![License](https://img.shields.io/cocoapods/l/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![Platform](https://img.shields.io/cocoapods/p/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 
-## Usage
+## 1. Usage
 
 Use `HTTPCookieMessageHandler` to receive and send `HTTPCookies` formatted as `JSON` over HTTP(S).
 
 `HTTPCookieMessageHandler`:
 
-1. Serializes `HTTPCookies` as `JSON` strings so you can `POST` or `PUT` them.
+* Serializes `HTTPCookies` as `JSON` strings so you can `POST` or `PUT` them.
 
-2. Deserializes `HTTPCookies` as `Dictionary<HTTPCookiePropertyKey, Any>` objects so you can use them in your code.
+* Deserializes `HTTPCookies` as `Dictionary<HTTPCookiePropertyKey, Any>` objects so you can use them in your code.
 
-3. Saves `HTTPCookies` in `HTTPCookieStorage`.
+* Saves `HTTPCookies` in `HTTPCookieStorage`.
 
-4. Fetches `HTTPCookies` from `HTTPCookieStorage`.
+* Fetches `HTTPCookies` from `HTTPCookieStorage`.
 
-5. **DRAFT**: Observes `HTTPCookies` of interest and and notifies whenever they change, e.g., signaling when a session cookie has changed or expired.
+> ### :soon: Observe `HTTPCookies`
+>
+> Use [`ReactiveX / RxSwift`](https://github.com/ReactiveX/RxSwift) to watch for cookies changing value and notify interested parties when they do (e.g., signaling when a session cookie has changed or expired).
 
-## `HTTPCookie` serialization
+### 1.1. `HTTPCookie` serialization
 
 For the following examples, let's assume we have a cookie called `sessionCookie`.
 
-### `HTTPCookie` to `Dictionary<HTTPCookiePropertyKey, Any>`
+### 1.2. `HTTPCookie` to `Dictionary<HTTPCookiePropertyKey, Any>`
 
 ```swift
 let cookieDictionary: Dictionary<HTTPCookiePropertyKey, Any>
   = HTTPCookieJson.dictionary(cookie: sessionCookie)
 ```
-### `HTTPCookie` to `String`
+### 1.3. `HTTPCookie` to `String`
 
 ```swift
 let jsonString: String =
   HTTPCookieJson.rawString(cookie: sessionCookie)
 ```
 
-### `Dictionary<HTTPCookiePropertyKey, Any>` to `HTTPCookie`
+### 1.4. `Dictionary<HTTPCookiePropertyKey, Any>` to `HTTPCookie`
 
 ```swift
 // Assume that a Dictionary for a Session Cookie
@@ -49,24 +52,30 @@ let jsonString: String =
 let cookie: HTTPCookie =
   HTTPCookieJson.cookie(dictionary: sessionDictionary)
 ```
-## `CRUD` using the `MessageHandler` `Protocol` (aka "`Interface`")
+### 1.5. `CRUD` using the `MessageHandler` `Protocol` (aka "`Interface`")
 
 The [`MessageHandler`](HTTPCookieMessageHandler/MessageHandler.swift) protocol defines a common interface for creating, reading, updating, and deleting data.
 
-## Requirements
+## 2. Requirements
 
-This library was written in Swift version 3.0. It hasn't been tested for `Objective C` bridging, yet: that's next.
+This library was written in Swift version 3.0.1.
 
-## Installation
+## 3. Installation
 
-> The best way to install `HTTPCookieMessageHandler` is with CocoaPods. Read [Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started) on the CocoaPods site, if you don't have `cocoapods` installed, already.
+> ### :information_source: CocoaPods
+>
+> You need CocoaPods to install `HTTPCookieMessageHandler`. Read [Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started) on the CocoaPods site, if you don't have `cocoapods` installed, already.
 
-`HTTPCookieMessageHandler` is not (yet) available through [CocoaPods](http://cocoapods.org). To install
-it, you'll need an SSH account on Verizon OneStash. If you do, simply add the following line to your Podfile:
+### 3.1. Clone the `HTTPCookieMessageHandler` repository
+
+`HTTPCookieMessageHandler` is not (yet) available through [CocoaPods](http://cocoapods.org). :disappointed: To install
+it, add the following line to your `Podfile`:
 
 ```ruby
-pod 'HTTPCookieMessageHandler', :git => 'ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git'
+pod 'HTTPCookieMessageHandler', :git => 'https://github.com/gregswindle/HTTPCookieMessageHandler.git'
 ```
+
+### 3.2. Install `HTTPCookieMessageHandler`
 
 Save your `Podfile` and run
 
@@ -74,9 +83,11 @@ Save your `Podfile` and run
 $ pod install
 ```
 
+### 3.3. Xcode
+
 If your Xcode project is open, close it and **reopen the `*.xcworkspace`, _not_ the ``*.xcodeproj`**.
 
-## Testing
+## 4. Testing
 
 `HTTPCookieMessageHandler` uses
 
@@ -88,29 +99,30 @@ If your Xcode project is open, close it and **reopen the `*.xcworkspace`, _not_ 
 
 * ~~[Cuckoo](https://github.com/SwiftKit/Cuckoo) for mocks and stubs~~
 
-> **Mocks** Swift doesn't handle stubs and mocks well, and four libraries later,
-> I ended up building my own, based on suggestions in the article [Real World Mocking in Swift](https://realm.io/news/tryswift-veronica-ray-real-world-mocking-swift/). Check out the simple [`called` Dictionary](https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler/blob/develop/HTTPCookieMessageHandlerTests/HTTPCookieMessageHandlerTests.swift#L66) I created for details.
+> ### :ghost: Mocks
+>
+Swift doesn't handle spys, stubs, and mocks well. Four libraries later, I ended up building my own, based on suggestions in the article [Real World Mocking in Swift](https://realm.io/news/tryswift-veronica-ray-real-world-mocking-swift/). Check out the simple [`called` Dictionary](HTTPCookieMessageHandlerTests/HTTPCookieMessageHandlerTests.swift#L66) for details.
 
-## Additional notes
+## 5. Cookies
 
-This section covers some important points about cookies. I mainly wrote it to guide unit testing.
+> :information_source: This section covers some important points about cookies. I mainly wrote it to guide unit testing.
 
-### Cookie attributes and case-sensitivity
+### 5.1. Cookie attributes and case-sensitivity
 
 Despite the debates you'll find online, `HTTPCookieMessageHandler` treats cookie attribute names with case-sensitivity. For Verizon's use cases, it doesn't really matter, though: `HTTPCookieMessageHandler` is not intended to create or edit cookies; it's supposed to simply "handle" cookies as "messages".
 
-### Cookie syntax and formatting
+### 5.2. Cookie syntax and formatting
 
-#### 1. [Set-Cookie Syntax](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+#### 5.2.1. [Set-Cookie Syntax](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
 
-###### 1.1. Name=Value
+###### 5.2.1.2. Name=Value
 
-_(Required)_
+> :cookie: _(Required)_
 Set-Cookie: `<cookie-name>`=`<cookie-value>`
 
-###### 1.2. Expires
+###### 5.2.1.3. Expires
 
-_(Optional)_
+> :cookie: _(Optional)_
 Set-Cookie: `<cookie-name>`=`<cookie-value>`; Expires=`<date>`
 
 Cookie dates follow the [RFC 7231, section 7.1.1.2: Date](RFC 7231, section 7.1.1.2: Date) format.
@@ -134,46 +146,47 @@ Cookie dates follow the [RFC 7231, section 7.1.1.2: Date](RFC 7231, section 7.1.
 
 > `GMT` Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-###### 1.3. Max-Age
+###### 5.2.1.4. Max-Age
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; Max-Age=`<non-zero-digit>`
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; Max-Age=`<non-zero-digit>`
 
-###### 1.4. Domain
+###### 5.2.1.5. Domain
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; Domain=`<domain-value>`
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; Domain=`<domain-value>`
 
-###### 1.5. Path
+###### 5.2.1.6. Path
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; Path=`<path-value>`
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; Path=`<path-value>`
 
-###### 1.6. Secure
+###### 5.2.1.7. Secure
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; Secure
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; Secure
 
-###### 1.7. HTTP only
+###### 5.2.1.8. HTTP only
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; HttpOnly
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; HttpOnly
 
-###### 1.8. SameSite=Strict
+###### 5.2.1.9. SameSite=Strict
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; SameSite=Strict
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; SameSite=Strict
 
-###### 1.9. SameSite=Lax
+###### 5.2.1.10. SameSite=Lax
 
-_(Optional)_
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; SameSite=Lax
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; SameSite=Lax
 
 Multiple directives are also possible, for example:
 
-Set-Cookie: `<cookie-name>`=`<cookie-value>`; Domain=`<domain-value>`; Secure; HttpOnly
+> :cookie: _(Optional)_
+> Set-Cookie: `<cookie-name>`=`<cookie-value>`; Domain=`<domain-value>`; Secure; HttpOnly
 
-#### 2. Set-Cookie Examples
+#### 5.3. Set-Cookie Examples
 
 ```
 Set-Cookie: user_session=PUsECFYS; path=/; expires=Thu, 09 Mar 2017 23:39:40 -0000; secure; HttpOnly
@@ -189,10 +202,10 @@ Set-Cookie: SMCHALLENGE=NTC_CHALLENGE_DONE; Path=/; domain=.verizon.com
 Set-Cookie: SMCHALLENGE=; Expires=Sat, 27 Aug 2016 23:46:21 GMT; Path=/; Domain=.verizon.com
 ```
 
-## Author
+## 6. Author
 
-[Greg Swindle](mailto:gregory.jay.swindle@one.verizon.com)
+[Greg Swindle](mailto:greg@swindle.net)
 
-## License
+## 7. License
 
 `HTTPCookieMessageHandler` is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
