@@ -9,15 +9,15 @@
 import Foundation
 
 public protocol MessageHandler {
-    
+
     associatedtype ItemType
-    
+
     //associatedtype StorageItemType
-    
+
     func find(_ options: [String: Any]?, _ callbackPredicate: (ItemType) -> Bool) -> ItemType?
-    
+
     func save(item: ItemType)
-    
+
     func save(_ options: [String: Any]?, items: [ItemType])
-    
+
 }

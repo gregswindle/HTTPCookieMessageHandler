@@ -9,12 +9,12 @@
 import Foundation
 
 public protocol Message {
-    
+
     associatedtype ItemType
-    
+
     var topic: String { get set }
-    
+
     var headers: [String:String] { get set }
-    
+
     var body: [ItemType] { get set }
 }
