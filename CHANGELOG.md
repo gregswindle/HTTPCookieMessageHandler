@@ -1,5 +1,10 @@
 <a name=""></a>
-# [](https://github.com/gregswindle/HTTPCookieMessageHandler/compare/v0.1.0...v) (2017-04-10)
+# CHANGELOG [](https://github.com/gregswindle/HTTPCookieMessageHandler/compare/v0.2.0...v) (2017-04-10)
+
+
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/gregswindle/HTTPCookieMessageHandler/compare/v0.1.0...v0.2.0) (2017-04-10)
 
 
 ### Features
@@ -15,6 +20,3 @@
 ### Reverts
 
 * **swiftlint:** undo lint damage and remove Cuckoo mock lib ([47503e6](https://github.com/gregswindle/HTTPCookieMessageHandler/commit/47503e6))
-
-
-

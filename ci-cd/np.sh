@@ -19,17 +19,20 @@ np() {
     echo ${1:-$bump} &&
     # npm --no-git-tag-version version ${1:-$bump} &>/dev/null &&
     # podspec-bump ${1:-$bump} -w &&
-
+    conventional-changelog -i CHANGELOG.md -s -p ${2:-$preset} &&
+    git add CHANGELOG.md &&
     # version=`cat package.json | json version` &&
     version="`podspec-bump --dump-version`" &&
     echo "v$version" &&
-    git tag -a v$version -m "v$version" &&
-    conventional-changelog -i CHANGELOG.md -s -p ${2:-$preset} &&
-    git add CHANGELOG.md &&
     git commit -m "docs(CHANGELOG): v$version" &&
     # mv -f _package.json package.json &&
     # npm version ${1:-$bump} -m "chore(release): %s" &&
-    git push --follow-tags &&
+    current_branch="`git rev-parse --abbrev-ref HEAD`" &&
+    echo $current_branch &&
+    git push origin $current_branch &&
+    git tag -a v$version -m "v$version"
+    # git push --follow-tags &&
+    git push origin --tags &&
     conventional-github-releaser -p ${2:-$preset} &&
     # npm publish
 }
