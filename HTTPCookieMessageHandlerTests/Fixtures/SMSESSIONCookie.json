@@ -1,0 +1,8 @@
+{
+    "name": "SMSESSION",
+    "value": "PUsECFYS-etc-etc-etc",
+    "path": "/",
+    "secure": "secure",
+    "httpOnly": "HttpOnly",
+    "domain": ".verizon.com"
+}

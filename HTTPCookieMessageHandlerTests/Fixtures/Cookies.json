@@ -1,0 +1,15 @@
+[{
+        "name": "SMSESSION",
+        "value": "PUsECFYS-etc-etc-etc",
+        "path": "/",
+        "secure": "secure",
+        "httpOnly": "HttpOnly",
+        "domain": ".verizon.com"
+    },
+    {
+        "name": "SMCHALLENGE",
+        "value": "NTC_CHALLENGE_DONE",
+        "path": "/",
+        "domain": ".verizon.com",
+        "expires": "Thu, 09 Mar 2017 23:39:40 GMT"
+}]
