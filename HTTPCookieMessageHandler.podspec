@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #
   # s.source        = { :git => "ssh://git@onestash.verizon.com:7999/~v128477/httpcookiemessagehandler.git" }
   # s.source       = { :git => "https://githubpoc.ebiz.verizon.com/v128477/HTTPCookieMessageHandler.git" } #, :tag => "#{s.version}" }
-  s.source       = { :git => "https://github.com/gregswindle/HTTPCookieMessageHandler.git"}
+  s.source       = { :git => "https://github.com/gregswindle/HTTPCookieMessageHandler.git", :tag => "v#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
