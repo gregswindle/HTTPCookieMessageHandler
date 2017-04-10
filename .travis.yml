@@ -1,0 +1,25 @@
+sudo: false
+rvm: 2.4.0
+language: swift
+osx_image: xcode8.3
+
+before_install:
+  - pwd
+  - ls -la
+  - gem install cocoapods
+install: bundle install
+
+script:
+  - xcodebuild -list
+  - pod lib lint --quick --allow-warnings
+  - set -o pipefail
+  - xcodebuild clean -workspace HTTPCookieMessageHandler.xcworkspace -scheme HTTPCookieMessageHandler -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 4s,OS=9.3' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter` --no-utf
+  # - xcodebuild clean -workspace HTTPCookieMessageHandler.xcworkspace -scheme HTTPCookieMessageHandler -configuration Debug -destination 'id=073EB75F-1D3B-41D6-BB3D-89D281928D46,platform=iOS Simulator,OS=9.3' -enableCodeCoverage YES build test | xcpretty -f `xcpretty-travis-formatter` --no-utf
+
+after_success: slather
+
+cache:
+  directories:
+    - '$HOME/.bundle/cache'
+    - '$HOME/.cocoapods/cache'
+    - '$HOME/.gem/cache'

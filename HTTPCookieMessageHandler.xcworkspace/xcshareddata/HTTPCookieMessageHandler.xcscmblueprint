@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4339A9DC86AD607161900D131D0E1ECCD83EC9EB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4339A9DC86AD607161900D131D0E1ECCD83EC9EB" : 9223372036854775807,
+    "0B5BC100C6004846BADA94A4E9027BF4C85DA4CC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A31718B8-EE2B-40B5-89EB-2FA93F28ACFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4339A9DC86AD607161900D131D0E1ECCD83EC9EB" : "HTTPCookieMessageHandler\/",
+    "0B5BC100C6004846BADA94A4E9027BF4C85DA4CC" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HTTPCookieMessageHandler",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HTTPCookieMessageHandler.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:github-verizon\/verizonpoc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0B5BC100C6004846BADA94A4E9027BF4C85DA4CC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gregswindle\/HTTPCookieMessageHandler.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4339A9DC86AD607161900D131D0E1ECCD83EC9EB"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+PODS:
+  - Nimble (6.0.1)
+  - Quick (1.1.0)
+  - SwiftLint (0.16.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - SwiftLint
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 10743c8221fea4741e1bfe6ca8e95dc7fb3c5111
+
+COCOAPODS: 1.2.0
