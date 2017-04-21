@@ -2,9 +2,9 @@
 
 > Send and receive `HTTPCookies` formatted as `JSON` over `HTTP(S)`.
 
-[![CI Status](http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)](https://travis-ci.org/gregswindle/HTTPCookieMessageHandler?branch=develop)
-[![Coverage Status](https://coveralls.io/repos/github/gregswindle/HTTPCookieMessageHandler/badge.svg?branch=feat%2F%231%2Fautomate-coverage-coveralls)](https://coveralls.io/github/gregswindle/HTTPCookieMessageHandler?branch=feat%2F%231%2Fautomate-coverage-coveralls)
-[![Version](https://img.shields.io/cocoapods/v/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
+[![License][license-image]][license-url] [![CI Status][travis-ci-image]][travis-ci-url]
+[![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][dependencyci-image]][dependencyci-url]
+<br>[![Version](https://img.shields.io/cocoapods/v/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![License](https://img.shields.io/cocoapods/l/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 [![Platform](https://img.shields.io/cocoapods/p/HTTPCookieMessageHandler.svg?style=flat)](http://cocoapods.org/pods/HTTPCookieMessageHandler)
 
@@ -209,3 +209,12 @@ Set-Cookie: SMCHALLENGE=; Expires=Sat, 27 Aug 2016 23:46:21 GMT; Path=/; Domain=
 ## 7. License
 
 `HTTPCookieMessageHandler` is available under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more info.
+
+[coveralls-image]: https://coveralls.io/repos/github/gregswindle/HTTPCookieMessageHandler/badge.svg?branch=develop
+[coveralls-url]: https://coveralls.io/github/gregswindle/HTTPCookieMessageHandler?branch=develop
+[dependencyci-image]: https://dependencyci.com/github/gregswindle/HTTPCookieMessageHandler/badge
+[dependencyci-url]: https://dependencyci.com/github/gregswindle/HTTPCookieMessageHandler
+[license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?stype=flat
+[license-url]: /Users/swindle/Projects/github/gregswindle/HTTPCookieMessageHandler/LICENSE
+[travis-ci-image]: http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)
+[travis-ci-url]: https://travis-ci.org/gregswindle/HTTPCookieMessageHandler?branch=develop
