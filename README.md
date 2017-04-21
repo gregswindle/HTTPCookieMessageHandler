@@ -215,6 +215,7 @@ Set-Cookie: SMCHALLENGE=; Expires=Sat, 27 Aug 2016 23:46:21 GMT; Path=/; Domain=
 [dependencyci-image]: https://dependencyci.com/github/gregswindle/HTTPCookieMessageHandler/badge
 [dependencyci-url]: https://dependencyci.com/github/gregswindle/HTTPCookieMessageHandler
 [license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?stype=flat
-[license-url]: /Users/swindle/Projects/github/gregswindle/HTTPCookieMessageHandler/LICENSE
-[travis-ci-image]: http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat)
+[license-url]: ./LICENSE
+
+[travis-ci-image]: http://img.shields.io/travis/gregswindle/HTTPCookieMessageHandler.svg?style=flat
 [travis-ci-url]: https://travis-ci.org/gregswindle/HTTPCookieMessageHandler?branch=develop
