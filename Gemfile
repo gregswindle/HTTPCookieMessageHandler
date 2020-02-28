@@ -9,6 +9,6 @@ gem 'xcpretty'
 # @see https://github.com/kattrali/xcpretty-travis-formatter
 gem 'xcpretty-travis-formatter'
 # Code coverage
-gem 'slather'
+gem 'slather', '>= 2.4.1'
 # Build and package iOS and macOS applications
 # gem 'fastlane'
